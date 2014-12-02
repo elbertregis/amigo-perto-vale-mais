@@ -1,6 +1,8 @@
 ﻿using Entidades.Basicas;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,11 +72,11 @@ namespace Dados.Repositorio
             {
                 if (ex.InnerException.Message.IndexOf("UNIQUE KEY") > -1)
                 {
-                    throw new ViolacaoChaveUnicaException(ex.InnerException);
+                    throw new ArgumentException("ViolacaoChaveUnicaException");
                 }
                 else
                 {
-                    throw new ViolacaoReferenciaException(ex.InnerException);
+                    throw new ArgumentException("ViolacaoReferenciaException");
                 }
             }
         }
