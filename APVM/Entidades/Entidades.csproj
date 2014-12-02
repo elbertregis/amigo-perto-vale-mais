@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basicas\Entidade.cs" />
     <Compile Include="Basicas\Tecnologia.cs" />
     <Compile Include="Basicas\Vaga.cs" />
     <Compile Include="Basicas\Candidato.cs" />

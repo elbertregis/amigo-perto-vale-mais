@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades.Basicas
 {
-    public class Tecnologia: Entidade
+    public class Entidade
     {
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+        public long Id { get; set; }
     }
 }
