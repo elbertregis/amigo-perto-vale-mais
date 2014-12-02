@@ -1,0 +1,10 @@
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\Entidades.dll.config
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\Entidades.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\Entidades.pdb
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\EntityFramework.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\EntityFramework.xml
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\obj\Debug\Entidades.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Entidades\obj\Debug\Entidades.pdb

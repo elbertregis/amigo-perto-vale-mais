@@ -1,0 +1,5 @@
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Negocios\bin\Debug\Negocios.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Negocios\bin\Debug\Negocios.pdb
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Negocios\obj\Debug\Negocios.dll
+c:\Users\Obscurum\documents\visual studio 2013\Projects\APVM\Negocios\obj\Debug\Negocios.pdb
