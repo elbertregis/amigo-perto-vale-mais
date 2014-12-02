@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Entidades.Basicas
 {
-    public class Usuario
+    public class Usuario: Entidade
     {
-        public long UsuarioId { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }

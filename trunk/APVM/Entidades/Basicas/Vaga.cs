@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Entidades.Basicas
 {
-    public class Vaga
+    public class Vaga: Entidade
     {
-        public long VagaId { get; set; }
         public string Descricao { get; set; }
         public virtual List<Tecnologia> PreRequisitos { get; set; }
         public string Resumo { get; set; }
