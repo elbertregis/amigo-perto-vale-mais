@@ -12,7 +12,6 @@ namespace Negocios.Negocios
     {
 
         VagaDAO vagaDAO = new VagaDAO();
-
         public void Inserir(Vaga vaga)
         {
             vagaDAO.Inserir(vaga);
