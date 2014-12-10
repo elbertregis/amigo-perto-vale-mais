@@ -30,7 +30,7 @@ namespace Negocios.Negocios
             return candidatoDAO.ObterTodos<Candidato>();
         }
 
-        public IQueryable<Candidato> Pesquisar<T>(Func<T, bool> filtro) where T : Candidato
+        public IEnumerable<Candidato> Pesquisar(Func<Candidato, bool> filtro)
         {
             return this.candidatoDAO.Pesquisar<Candidato>(filtro);
         }
