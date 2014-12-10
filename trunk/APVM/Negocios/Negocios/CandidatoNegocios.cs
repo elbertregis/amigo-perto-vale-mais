@@ -29,5 +29,15 @@ namespace Negocios.Negocios
         {
             return candidatoDAO.ObterTodos<Candidato>();
         }
+
+        public IQueryable<Candidato> Pesquisar<T>(Func<T, bool> filtro) where T : Candidato
+        {
+            return this.candidatoDAO.Pesquisar<Candidato>(filtro);
+        }
+
+        public T ObterUm<T>(Func<T, bool> filtro) where T : Candidato
+        {
+            return this.candidatoDAO.ObterUm<T>(filtro);
+        }
     }
 }
