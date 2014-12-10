@@ -33,14 +33,9 @@ namespace Negocios.Negocios
             return usuarioDAO.ObterTodos<Usuario>();
         }
 
-        //public IQueryable<Usuario> Pesquisar<T>(Func<T, bool> filtro)
-        //{
-        //    return this.usuarioDAO.Pesquisar<Usuario>(filtro);
-        //}
-
-        public IQueryable<Usuario> PesquisarAnotacao(Func<Usuario, bool> filtro)
+        public IEnumerable<Usuario> Pesquisar(Func<Usuario, bool> filtro) 
         {
-            return usuarioDAO.Pesquisar<Usuario>(filtro);
+            return this.usuarioDAO.Pesquisar<Usuario>(filtro);
         }
 
         public T ObterUm<T>(Func<T, bool> filtro) where T : Usuario
