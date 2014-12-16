@@ -1,0 +1,45 @@
+﻿@model APVM.Models.Tecnologia.CadastroTecnologiaModels
+@{
+    ViewBag.Title = "Cadastro Tecnologia";
+}
+
+<hgroup class="title">
+    <h2>@ViewBag.Title.</h2>
+    <br />
+    <h3>@ViewBag.Message</h3>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+<section>
+    <article>
+
+        <h3>Cadastro de Tecnologia</h3>
+        <fieldset>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.NomeTecnologia)
+                    @Html.TextBoxFor(m => m.NomeTecnologia)
+                    @Html.ValidationMessageFor(m => m.NomeTecnologia)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Descricao)
+                    @Html.TextAreaFor(m => m.Descricao)
+                    @Html.ValidationMessageFor(m => m.Descricao)
+                </li>
+
+            </ol>
+
+            <button type="button" value="Voltar" name="Voltar" onclick="location.href='@Url.Action("PesquisarTecnologia", "Tecnologia")'">Voltar</button>&nbsp;
+            <input type="submit" value="Salvar" />
+
+        </fieldset>
+
+    </article>
+</section>
+}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

@@ -185,6 +185,7 @@ namespace Dados.Repositorio
             using (var contexto = new Contexto())
             {
                 contexto.Set<T>().Add(entidade);
+                contexto.SaveChanges();
             }
         }
 

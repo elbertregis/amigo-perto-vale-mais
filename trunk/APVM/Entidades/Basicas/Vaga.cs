@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Entidades.Basicas
 {
-    public class Vaga: Entidade
+    public class Vaga : Entidade
     {
         public string Descricao { get; set; }
         public virtual List<Tecnologia> PreRequisitos { get; set; }
         public string Resumo { get; set; }
-        public int? Nivel { get; set; }
+        private int? Nivel { get; set; }
         public DateTime Validade { get; set; }
+        public int Status { get; set; }
         public Nivel? NivelEnum
         {
             get { return (Nivel?)NivelEnum; }
