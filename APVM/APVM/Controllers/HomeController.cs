@@ -22,6 +22,13 @@ namespace APVM.Controllers
             return View();
         }
 
+        public ActionResult Tecnologia()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

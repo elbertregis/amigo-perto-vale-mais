@@ -13,7 +13,7 @@ namespace Entidades.Basicas
         public string Email { get; set; }
         public string Senha { get; set; }
         public int? TipoUsuario { get; set; }
-        public virtual List<Candidato> Candidatos { get; set; }
+        private List<Candidato> Candidatos { get; set; }
         public TipoUsuario? TipoUsuarioEnum
         {
             get { return (TipoUsuario?)TipoUsuario; }

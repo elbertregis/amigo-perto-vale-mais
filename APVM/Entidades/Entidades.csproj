@@ -54,6 +54,7 @@
     <Compile Include="Basicas\Usuario.cs" />
     <Compile Include="Util\Local.cs" />
     <Compile Include="Util\Nivel.cs" />
+    <Compile Include="Util\Situacao.cs" />
     <Compile Include="Util\TipoUsuario.cs" />
   </ItemGroup>
   <ItemGroup />

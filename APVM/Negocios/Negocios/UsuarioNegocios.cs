@@ -16,6 +16,7 @@ namespace Negocios.Negocios
         public void Inserir(Usuario usuario)
         {
             usuarioDAO.Inserir(usuario);
+            usuarioDAO.SalvarContexto();
         }
 
         public void Atualizar(Usuario usuario)
@@ -43,5 +44,23 @@ namespace Negocios.Negocios
             return this.usuarioDAO.ObterUm<T>(filtro);
         }
 
+        public bool Autenticar(Usuario usuario)
+        {
+                 
+                      
+            bool validacaoLogin = false;
+
+            var query = (from u in this.ObterTodos()
+                    where u.Email.Equals(usuario.Email) && u.Senha.Equals(usuario.Senha)
+                    select u).SingleOrDefault<Usuario>();
+
+            if (query != null)
+            {
+                validacaoLogin = true;
+            }
+
+            return validacaoLogin;
+
+        }
     }
 }

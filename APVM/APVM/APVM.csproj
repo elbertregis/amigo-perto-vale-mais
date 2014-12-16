@@ -186,12 +186,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Tecnologia\TecnologiaController.cs" />
+    <Compile Include="Controllers\Usuario\UsuarioController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\LoginModels.cs" />
+    <Compile Include="Models\Usuario\LoginModels.cs" />
+    <Compile Include="Models\Usuario\RegisterModels.cs" />
+    <Compile Include="Models\Tecnologia\CadastroTecnologiaModels.cs" />
+    <Compile Include="Models\Tecnologia\PesquisarTecnologiaModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +310,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Usuario\Login.cshtml" />
+    <Content Include="Views\Usuario\Register.cshtml" />
+    <Content Include="Views\Tecnologia\PesquisarTecnologia.cshtml" />
+    <Content Include="Views\Tecnologia\CadastroTecnologia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,9 +322,20 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Dados\Dados.csproj">
       <Project>{17e052db-a260-411f-bacd-394c990e18b4}</Project>
       <Name>Dados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{3f82774a-7927-4b2d-ab72-458da7620b27}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{73508d28-b112-40be-9ac9-b057c8ea0d0a}</Project>
+      <Name>Negocios</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

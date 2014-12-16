@@ -26,7 +26,7 @@ namespace APVM.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                //Database.SetInitializer<UsersContext>(null);
                 Database.SetInitializer<Contexto>(null);
                 try
                 {
@@ -39,16 +39,16 @@ namespace APVM.Filters
                         }
                     }
 
-                    using (var context = new UsersContext())
-                    {
-                        if (!context.Database.Exists())
-                        {
-                            // Create the SimpleMembership database without Entity Framework migration schema
-                            ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
-                        }
-                    }
+                    //using (var context = new UsersContext())
+                    //{
+                    //    if (!context.Database.Exists())
+                    //    {
+                    //        // Create the SimpleMembership database without Entity Framework migration schema
+                    //        ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
+                    //    }
+                    //}
 
-                    WebSecurity.InitializeDatabaseConnection("AmigoPertoValeMais", "Usuario", "UsuarioId", "Nome", autoCreateTables: true);
+                   // WebSecurity.InitializeDatabaseConnection("AmigoPertoValeMais", "Usuario", "UsuarioId", "Nome", autoCreateTables: true);
                 }
                 catch (Exception ex)
                 {

@@ -1,0 +1,53 @@
+﻿@model APVM.Models.Tecnologia.PesquisarTecnologiaModels
+
+@{
+    ViewBag.Title = "Pesquisar Tecnologia";
+}
+
+<hgroup class="title">
+    <h2>@ViewBag.Title.</h2>
+    <br />
+    <h3>@ViewBag.Message</h3>
+</hgroup>
+
+<section>
+    <article>
+
+        <fieldset>
+            <legend>Pesquisar Tecnologia</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.NomeTecnologia)
+                    @Html.TextBoxFor(m => m.NomeTecnologia)
+                    @Html.ValidationMessageFor(m => m.NomeTecnologia)
+                    &nbsp; <button type="button" value="Pesquisar" name="Pesquisar">Pesquisar</button>
+                </li>
+
+            </ol>
+                
+            <table style="width:100%">
+                <tr>
+                    <th>Tecnologia</th>
+                    <th colspan="2">Descrição</th>
+                </tr>
+                
+
+                @foreach (Entidades.Basicas.Tecnologia item in Model.ListaTecnologia)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m => item.Nome)</td>
+                        <td colspan="2">@Html.DisplayFor(m => item.Descricao)</td>
+                    </tr>
+                }
+            </table>
+
+
+            @*<button type="button" name="Voltar" onclick="location.href='@Url.Action("Voltar", "Usuario")'">Voltar</button> &nbsp;*@
+            <button type="button" value="Cadastrar" name="Cadastrar" onclick="location.href='@Url.Action("CadastroTecnologia", "Tecnologia")'">Cadastrar</button>&nbsp;
+            <button type="button" value="Editar" name="Editar">Editar</button>
+        </fieldset>
+    </article>
+</section>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
