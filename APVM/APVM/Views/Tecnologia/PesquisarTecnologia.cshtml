@@ -10,6 +10,9 @@
     <h3>@ViewBag.Message</h3>
 </hgroup>
 
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
 <section>
     <article>
 
@@ -48,6 +51,7 @@
         </fieldset>
     </article>
 </section>
+}
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
