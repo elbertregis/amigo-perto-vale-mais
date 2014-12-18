@@ -1,0 +1,68 @@
+﻿@model APVM.Models.Vaga.RegisterModels
+@{
+    ViewBag.Title = "RegisterVaga";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <hgroup class="title">
+        <h1>@ViewBag.Title.</h1>
+        <br />
+        <h2>Create a new account.</h2>
+    </hgroup>
+
+
+    <fieldset>
+        <legend>Registration Form</legend>
+
+        <table style="width:100%">
+
+            <tr>
+                <td>@Html.LabelFor(m => m.DescricaoVaga)</td>
+                <td>
+                    @Html.TextAreaFor(m => m.DescricaoVaga)
+                    @Html.ValidationMessageFor(m => m.DescricaoVaga)
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Descricao)</td>
+                <td>
+                    @Html.TextAreaFor(m => m.Descricao)
+                    @Html.ValidationMessageFor(m => m.Descricao)
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Validade)</td>
+                <td>
+                    @Html.EditorFor(m => m.Validade)
+                    @Html.ValidationMessageFor(m => m.Validade)
+                </td>
+            </tr>
+
+
+        </table>
+        <table style="width:100%">
+            <tr>
+                <th>Tecnologia</th>
+                <th colspan="2">Descrição</th>
+            </tr>
+            
+
+            @foreach (Entidades.Basicas.Tecnologia item in Model.ListaTecnologia)
+    {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.Nome)</td>
+                    <td colspan="2">@Html.DisplayFor(m => item.Descricao)</td>
+                </tr>
+    }
+        </table>
+
+        <input type="submit" value="Registrar" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

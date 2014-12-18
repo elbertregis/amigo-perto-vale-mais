@@ -10,7 +10,8 @@
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+    @Html.ValidationSummary(true)
+    
 
     <fieldset>
         <legend>Registration Form</legend>
@@ -18,18 +19,22 @@
             <li>
                 @Html.LabelFor(m => m.Nome)
                 @Html.TextBoxFor(m => m.Nome)
+                @Html.ValidationMessageFor(m => m.Nome)
             </li>
             <li>
                 @Html.LabelFor(m => m.Login)
                 @Html.TextBoxFor(m => m.Login)
+                @Html.ValidationMessageFor(m => m.Login)
             </li>
             <li>
                 @Html.LabelFor(m => m.Password)
                 @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
             </li>
             <li>
                 @Html.LabelFor(m => m.ConfirmPassword)
                 @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
             </li>
         </ol>
         <button type="button" name="Voltar" onclick="location.href='@Url.Action("Voltar", "Usuario")'">Voltar</button> &nbsp;

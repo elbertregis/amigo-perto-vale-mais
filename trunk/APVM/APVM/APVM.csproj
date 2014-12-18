@@ -188,6 +188,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Tecnologia\TecnologiaController.cs" />
     <Compile Include="Controllers\Usuario\UsuarioController.cs" />
+    <Compile Include="Controllers\Vaga\VagaController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,7 @@
     <Compile Include="Models\Usuario\RegisterModels.cs" />
     <Compile Include="Models\Tecnologia\CadastroTecnologiaModels.cs" />
     <Compile Include="Models\Tecnologia\PesquisarTecnologiaModels.cs" />
+    <Compile Include="Models\Vaga\RegisterModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -314,6 +316,7 @@
     <Content Include="Views\Usuario\Register.cshtml" />
     <Content Include="Views\Tecnologia\PesquisarTecnologia.cshtml" />
     <Content Include="Views\Tecnologia\CadastroTecnologia.cshtml" />
+    <Content Include="Views\Vaga\RegisterVaga.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
